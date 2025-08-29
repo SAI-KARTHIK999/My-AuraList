@@ -93,7 +93,7 @@ export function TaskItem({ task, onToggle, onDelete, onEdit }: TaskItemProps) {
           </>
         ) : (
           <>
-            <Button aria-label="Edit task" size="icon" variant="ghost" onClick={() => setIsEditing(true)} className="h-8 w-8 text-primary hover:text-primary/80 hover:bg-accent/10 transition-colors opacity-0 group-hover:opacity-100">
+            <Button aria-label="Edit task" size="icon" variant="ghost" onClick={() => setIsEditing(true)} className="h-8 w-8 text-primary hover:text-primary/80 hover:bg-accent/10 transition-colors">
               <Edit className="h-4 w-4" />
             </Button>
             <Button aria-label="Delete task" size="icon" variant="ghost" onClick={() => onDelete(task.id)} className="h-8 w-8 text-destructive/80 hover:text-destructive hover:bg-destructive/10 transition-colors">
