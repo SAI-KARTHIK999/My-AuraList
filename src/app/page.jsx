@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTasks } from '@/hooks/use-tasks';
 import { AddTaskForm } from '@/components/auralist/AddTaskForm';
 import { FilterControls } from '@/components/auralist/FilterControls';
@@ -16,6 +16,25 @@ function AuraListApp() {
     toggleTask, 
   } = useTasks();
   const [filter, setFilter] = useState('all');
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (mainRef.current) {
+        const { clientX, clientY } = e;
+        const { offsetWidth, offsetHeight } = mainRef.current;
+        const x = (clientX / offsetWidth) * 100;
+        const y = (clientY / offsetHeight) * 100;
+        mainRef.current.style.setProperty('--cursor-x', `${x}%`);
+        mainRef.current.style.setProperty('--cursor-y', `${y}%`);
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   const filteredTasks = useMemo(() => {
     return tasks.filter((task) => {
@@ -26,7 +45,10 @@ function AuraListApp() {
   }, [tasks, filter]);
 
   return (
-    <main className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
+    <main 
+      ref={mainRef}
+      className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4 interactive-bg transition-all duration-300"
+    >
       <div className="w-full max-w-2xl">
         <header className="flex flex-col items-center justify-center gap-4 text-center mb-8">
           <div className="flex items-center gap-2 md:gap-4">

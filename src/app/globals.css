@@ -75,4 +75,14 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  .interactive-bg {
+    --cursor-x: 50%;
+    --cursor-y: 50%;
+    background-image: radial-gradient(
+      circle at var(--cursor-x) var(--cursor-y),
+      hsl(var(--primary) / 0.15),
+      hsl(var(--background)) 25%
+    );
+  }
 }
