@@ -34,12 +34,10 @@ export default function Home() {
       <div className="w-full max-w-2xl">
         <header className="flex flex-col items-center justify-center gap-4 text-center mb-8">
           <div className="flex items-center gap-2 md:gap-4">
-            <Icons.Logo className="w-10 h-10 md:w-12 md:h-12" />
             <h1 className="text-4xl md:text-7xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_hsl(var(--primary))]">
               Aura List
             </h1>
           </div>
-          <p className="text-base md:text-lg text-muted-foreground">Your tasks, your aura.</p>
         </header>
 
         <Card className="w-full bg-card/50 backdrop-blur-lg border-primary/20 shadow-2xl shadow-primary/10">
