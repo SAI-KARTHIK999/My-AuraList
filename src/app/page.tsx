@@ -7,11 +7,10 @@ import { AddTaskForm } from '@/components/auralist/AddTaskForm';
 import { FilterControls } from '@/components/auralist/FilterControls';
 import { TaskList } from '@/components/auralist/TaskList';
 import { Card, CardContent } from '@/components/ui/card';
-import { Icons } from '@/components/auralist/Icons';
 
 type FilterStatus = 'all' | 'active' | 'completed';
 
-export default function Home() {
+function AuraListApp() {
   const { 
     tasks, 
     addTask, 
@@ -60,4 +59,8 @@ export default function Home() {
       </div>
     </main>
   );
+}
+
+export default function Home() {
+  return <AuraListApp />;
 }
