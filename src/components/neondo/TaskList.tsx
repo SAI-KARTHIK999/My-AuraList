@@ -8,10 +8,9 @@ interface TaskListProps {
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
   onEdit: (id: string, newText: string) => void;
-  onUpdatePriority: (id: string, priorityData: Partial<Pick<Task, 'priorityScore' | 'reasoning' | 'suggestedAction'>>) => void;
 }
 
-export function TaskList({ tasks, onToggle, onDelete, onEdit, onUpdatePriority }: TaskListProps) {
+export function TaskList({ tasks, onToggle, onDelete, onEdit }: TaskListProps) {
   if (tasks.length === 0) {
     return (
       <div className="text-center py-12 text-muted-foreground">
@@ -30,7 +29,6 @@ export function TaskList({ tasks, onToggle, onDelete, onEdit, onUpdatePriority }
           onToggle={onToggle}
           onDelete={onDelete}
           onEdit={onEdit}
-          onUpdatePriority={onUpdatePriority}
         />
       ))}
     </div>

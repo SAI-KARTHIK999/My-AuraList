@@ -18,7 +18,6 @@ export default function Home() {
     editTask, 
     deleteTask, 
     toggleTask, 
-    updateTaskPriority 
   } = useTasks();
   const [filter, setFilter] = useState<FilterStatus>('all');
 
@@ -27,7 +26,7 @@ export default function Home() {
       if (filter === 'active') return !task.completed;
       if (filter === 'completed') return task.completed;
       return true;
-    }).sort((a, b) => (b.priorityScore || 0) - (a.priorityScore || 0));
+    });
   }, [tasks, filter]);
 
   return (
@@ -54,7 +53,6 @@ export default function Home() {
               onEdit={editTask}
               onDelete={deleteTask}
               onToggle={toggleTask}
-              onUpdatePriority={updateTaskPriority}
             />
           </CardContent>
         </Card>

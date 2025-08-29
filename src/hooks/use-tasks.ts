@@ -75,14 +75,6 @@ export function useTasks() {
       )
     );
   }, []);
-  
-  const updateTaskPriority = useCallback((id: string, priorityData: Partial<Pick<Task, 'priorityScore' | 'reasoning' | 'suggestedAction'>>) => {
-    setTasks(prevTasks =>
-      prevTasks.map(task =>
-        task.id === id ? { ...task, ...priorityData } : task
-      )
-    );
-  }, []);
 
-  return { tasks, addTask, editTask, deleteTask, toggleTask, updateTaskPriority };
+  return { tasks, addTask, editTask, deleteTask, toggleTask };
 }
