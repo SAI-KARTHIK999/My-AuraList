@@ -57,7 +57,6 @@ export default function Home() {
           </CardContent>
         </Card>
         <footer className="text-center mt-8 text-muted-foreground text-xs md:text-sm">
-          <p>Built for the future. Ctrl+B to toggle sidebar is a myth here.</p>
         </footer>
       </div>
     </main>
