@@ -11,12 +11,18 @@ Follow these steps to clone, set up, and run AuraList locally using GitHub + VS 
 # -> Clone the Repository from GitHub
 
 Open VS Code
-Open Terminal in VS Code (Ctrl + ~)  <br>
-Run: <br>
-git clone https://github.com/yourusername/My-AuraList.git <br>
-cd My-AuraList  <br>
-npm install <br>
-npm run dev  <br>
+Open Terminal in VS Code (Ctrl + ~)  
+
+Run:   
+
+git clone https://github.com/yourusername/My-AuraList.git   
+
+cd My-AuraList  
+
+npm install  
+
+npm run dev 
+
 
 # 🛠️ Tech Stack
 Frontend → React.js, TailwindCSS
