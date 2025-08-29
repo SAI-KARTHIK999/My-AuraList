@@ -39,7 +39,7 @@ function AuraListApp() {
           <p className="text-base md:text-lg text-muted-foreground max-w-md animate-fall-down opacity-0">{"<Your tasks, your aura>"}</p>
         </header>
 
-        <Card className="w-full bg-card/50 backdrop-blur-lg border-primary/20 shadow-2xl shadow-primary/10 animate-space-dive-in opacity-0">
+        <Card className="w-full bg-card/50 backdrop-blur-2xl border-primary/20 shadow-2xl shadow-primary/20 animate-space-dive-in opacity-0">
           <CardContent className="p-4 md:p-6">
             <AddTaskForm addTask={addTask} />
             <div className="my-4 md:my-6">
