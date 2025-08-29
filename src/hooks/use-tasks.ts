@@ -32,7 +32,7 @@ export function useTasks() {
   useEffect(() => {
     if (!isServer) {
       try {
-        const storedTasks = localStorage.getItem('neon-do-tasks');
+        const storedTasks = localStorage.getItem('aura-list-tasks');
         if (storedTasks) {
           setTasks(JSON.parse(storedTasks));
         }
@@ -45,7 +45,7 @@ export function useTasks() {
   useEffect(() => {
     if (!isServer) {
       try {
-        localStorage.setItem('neon-do-tasks', JSON.stringify(tasks));
+        localStorage.setItem('aura-list-tasks', JSON.stringify(tasks));
       } catch (error) {
         console.error('Failed to save tasks to localStorage', error);
       }

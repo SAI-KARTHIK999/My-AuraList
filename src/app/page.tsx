@@ -3,11 +3,11 @@
 import { useState, useMemo } from 'react';
 import type { Task } from '@/types/task';
 import { useTasks } from '@/hooks/use-tasks';
-import { AddTaskForm } from '@/components/neondo/AddTaskForm';
-import { FilterControls } from '@/components/neondo/FilterControls';
-import { TaskList } from '@/components/neondo/TaskList';
+import { AddTaskForm } from '@/components/auralist/AddTaskForm';
+import { FilterControls } from '@/components/auralist/FilterControls';
+import { TaskList } from '@/components/auralist/TaskList';
 import { Card, CardContent } from '@/components/ui/card';
-import { Icons } from '@/components/neondo/Icons';
+import { Icons } from '@/components/auralist/Icons';
 
 type FilterStatus = 'all' | 'active' | 'completed';
 
@@ -36,10 +36,10 @@ export default function Home() {
           <div className="flex items-center gap-2 md:gap-4">
             <Icons.Logo className="w-10 h-10 md:w-12 md:h-12" />
             <h1 className="text-4xl md:text-7xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_hsl(var(--primary))]">
-              NeonDo
+              Aura List
             </h1>
           </div>
-          <p className="text-base md:text-lg text-muted-foreground">Your futuristic task manager.</p>
+          <p className="text-base md:text-lg text-muted-foreground">Your tasks, your aura.</p>
         </header>
 
         <Card className="w-full bg-card/50 backdrop-blur-lg border-primary/20 shadow-2xl shadow-primary/10">

@@ -11,7 +11,7 @@ const Logo = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <path 
-      d="M8 18V6H10.4L15.6 14.25V6H18V18H15.6L10.4 9.75V18H8Z"
+      d="M8.3,18H6L12,6L18,18H15.7L14.7,15.5H9.3L8.3,18 M10.1,13.5H13.9L12,8.5L10.1,13.5Z"
       fill="hsl(var(--primary))" 
     />
   </svg>

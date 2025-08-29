@@ -4,8 +4,8 @@ import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'NeonDo',
-  description: 'A futuristic To-Do List application',
+  title: 'Aura List',
+  description: 'Your tasks, your aura',
 };
 
 export default function RootLayout({

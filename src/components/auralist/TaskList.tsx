@@ -1,7 +1,7 @@
 'use client';
 
 import type { Task } from '@/types/task';
-import { TaskItem } from '@/components/neondo/TaskItem';
+import { TaskItem } from '@/components/auralist/TaskItem';
 
 interface TaskListProps {
   tasks: Task[];
