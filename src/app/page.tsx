@@ -33,7 +33,7 @@ function AuraListApp() {
       <div className="w-full max-w-2xl">
         <header className="flex flex-col items-center justify-center gap-4 text-center mb-8">
           <div className="flex items-center gap-2 md:gap-4">
-            <h1 className="text-4xl md:text-7xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_hsl(var(--primary))]">
+            <h1 className="text-4xl md:text-7xl font-headline font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary drop-shadow-[0_0_8px_hsl(var(--primary))]">
               Aura List
             </h1>
           </div>
