@@ -29,6 +29,10 @@ Frontend → React.js, TailwindCSS
 
 State Management → React Hooks  
 
-Deployment →  Netlify
-{LINK- https://auralist.netlify.app/ }
+Deployment →  Netlify  
+
+# 🌐 Demo Link
+
+# https://auralist.netlify.app/
+
 ✨ With this project, the goal was to show how React alone can create a powerful productivity tool with a clean UI and engaging user experience.
