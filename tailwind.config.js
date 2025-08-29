@@ -92,12 +92,17 @@ module.exports = {
           'from': { opacity: '0', transform: 'scale(0.8) translateY(20%)' },
           'to': { opacity: '1', transform: 'scale(1) translateY(0)' },
         },
+        'fall-down': {
+          'from': { opacity: '0', transform: 'translateY(-100%)' },
+          'to': { opacity: '1', transform: 'translateY(0)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         glow: 'glow 2s ease-in-out infinite',
-        'space-dive-in': 'space-dive-in 1s ease-out forwards',
+        'space-dive-in': 'space-dive-in 0.8s ease-out 0.4s forwards',
+        'fall-down': 'fall-down 0.8s ease-out forwards',
       },
     },
   },
