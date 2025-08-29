@@ -88,11 +88,16 @@ module.exports = {
           "0%, 100%": { opacity: "1", "box-shadow": "0 0 10px hsl(var(--accent))" },
           "50%": { opacity: "0.7", "box-shadow": "0 0 20px hsl(var(--accent))"  },
         },
+        'space-dive-in': {
+          'from': { opacity: '0', transform: 'scale(0.8) translateY(20%)' },
+          'to': { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         glow: 'glow 2s ease-in-out infinite',
+        'space-dive-in': 'space-dive-in 1s ease-out forwards',
       },
     },
   },
