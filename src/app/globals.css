@@ -83,7 +83,7 @@
       radial-gradient(white 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 70px 70px;
     background-position: 0 0, 0 0, 0 0, 0 0, 35px 35px;
-    animation: stars 200s linear infinite;
+    animation: stars 60s linear infinite;
   }
 
   @keyframes stars {
@@ -91,7 +91,7 @@
       background-position: 0 0, 0 0, 0 0, 0 0, 35px 35px;
     }
     to {
-      background-position: 0 0, 0 0, 0 0, -500px 500px, -700px 700px;
+      background-position: 0 0, 0 0, 0 0, -1000px 1000px, -1400px 1400px;
     }
   }
 }
