@@ -1,5 +1,6 @@
-f# Firebase Studio
+# 🌌 AuraList – Smart & Personalized Task Manager
 
-This is a NextJS starter in Firebase Studio.
+AuraList is a modern, aesthetic, and user-friendly to-do list application built with the React.
+It helps you create, organize, and manage tasks with advanced features like recurring tasks, reminders, subtasks, tagging, dark mode, and custom themes.
 
-To get started, take a look at src/app/page.tsx.
+✨ Your tasks, your aura.
