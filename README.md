@@ -29,6 +29,6 @@ Frontend → React.js, TailwindCSS
 
 State Management → React Hooks  
 
-Deployment → Vercel / Netlify
-
+Deployment →  Netlify
+{LINK- https://auralist.netlify.app/}
 ✨ With this project, the goal was to show how React alone can create a powerful productivity tool with a clean UI and engaging user experience.
