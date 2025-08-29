@@ -37,7 +37,7 @@ function AuraListApp() {
               Aura List
             </h1>
           </div>
-          <p className="text-base md:text-lg text-muted-foreground max-w-md">Your tasks, your aura</p>
+          <p className="text-base md:text-lg text-muted-foreground max-w-md">{"<Your tasks, your aura>"}</p>
         </header>
 
         <Card className="w-full bg-card/50 backdrop-blur-lg border-primary/20 shadow-2xl shadow-primary/10">

@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Aura List',
-  description: 'Your tasks, your aura',
+  description: '<Your tasks, your aura>',
 };
 
 export default function RootLayout({
