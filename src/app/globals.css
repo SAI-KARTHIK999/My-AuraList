@@ -74,16 +74,18 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1), hsl(var(--background)) 70%);
-    animation: background-pulse 10s ease-in-out infinite;
+    animation: background-pulse 8s ease-in-out infinite;
   }
 }
 
 @keyframes background-pulse {
-  0%, 100% {
+  0% {
     background-image: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1), hsl(var(--background)) 70%);
   }
   50% {
-    background-image: radial-gradient(ellipse at center, hsl(var(--accent) / 0.1), hsl(var(--background)) 75%);
+    background-image: radial-gradient(ellipse at center, hsl(var(--primary) / 0.2), hsl(var(--background)) 75%);
+  }
+  100% {
+    background-image: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1), hsl(var(--background)) 70%);
   }
 }
