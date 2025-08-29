@@ -74,18 +74,5 @@
   }
   body {
     @apply bg-background text-foreground;
-    animation: background-pulse 4s ease-in-out infinite;
-  }
-}
-
-@keyframes background-pulse {
-  0% {
-    background-image: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1), hsl(var(--background)) 70%);
-  }
-  50% {
-    background-image: radial-gradient(ellipse at center, hsl(var(--primary) / 0.25), hsl(var(--background)) 80%);
-  }
-  100% {
-    background-image: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1), hsl(var(--background)) 70%);
   }
 }
