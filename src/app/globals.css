@@ -77,10 +77,8 @@
   }
   
   .interactive-bg {
-    --cursor-x: 50%;
-    --cursor-y: 50%;
     background-image: radial-gradient(
-      circle at var(--cursor-x) var(--cursor-y),
+      circle at 50% 50%,
       hsl(var(--primary) / 0.15),
       hsl(var(--background)) 25%
     );
