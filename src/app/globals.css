@@ -74,6 +74,24 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1), transparent 30%), radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.08), transparent 30%);
+    background-color: #000;
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.1), transparent 20%),
+      radial-gradient(circle at 80% 30%, hsl(var(--secondary) / 0.1), transparent 20%),
+      radial-gradient(circle at 50% 80%, hsl(var(--accent) / 0.08), transparent 15%),
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(white 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 70px 70px;
+    background-position: 0 0, 0 0, 0 0, 0 0, 35px 35px;
+    animation: stars 200s linear infinite;
+  }
+
+  @keyframes stars {
+    from {
+      background-position: 0 0, 0 0, 0 0, 0 0, 35px 35px;
+    }
+    to {
+      background-position: 0 0, 0 0, 0 0, -500px 500px, -700px 700px;
+    }
   }
 }
