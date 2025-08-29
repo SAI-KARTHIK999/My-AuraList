@@ -5,8 +5,14 @@ import type { Task } from '@/types/task';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
-import { Check, Edit, Save, Trash2, X } from 'lucide-react';
+import { Check, Edit, Save, Trash2, X, Repeat } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 interface TaskItemProps {
   task: Task;
@@ -64,6 +70,18 @@ export function TaskItem({ task, onToggle, onDelete, onEdit }: TaskItemProps) {
       )}
 
       <div className="flex items-center gap-0 md:gap-1">
+        {task.isDaily && (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Repeat className="h-4 w-4 text-secondary" />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>This is a daily recurring task.</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )}
         {isEditing ? (
           <>
             <Button aria-label="Save task" size="icon" variant="ghost" onClick={handleEdit} className="h-8 w-8 text-green-400 hover:text-green-300 hover:bg-accent/10">

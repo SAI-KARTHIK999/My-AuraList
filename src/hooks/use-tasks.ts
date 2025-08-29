@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import type { Task } from '@/types/task';
+import { isToday, isBefore, startOfToday } from 'date-fns';
 
 const nanoid = (size = 21): string => {
     if (typeof window !== 'undefined' && window.crypto) {
@@ -34,7 +35,19 @@ export function useTasks() {
       try {
         const storedTasks = localStorage.getItem('aura-list-tasks');
         if (storedTasks) {
-          setTasks(JSON.parse(storedTasks));
+          const parsedTasks: Task[] = JSON.parse(storedTasks);
+          const today = startOfToday();
+          // Reset daily tasks that were completed before today
+          const updatedTasks = parsedTasks.map(task => {
+            if (task.isDaily && task.completed && task.completedOn) {
+              const completedDate = new Date(task.completedOn);
+              if (isBefore(completedDate, today)) {
+                return { ...task, completed: false, completedOn: null };
+              }
+            }
+            return task;
+          });
+          setTasks(updatedTasks);
         }
       } catch (error) {
         console.error('Failed to load tasks from localStorage', error);
@@ -52,9 +65,9 @@ export function useTasks() {
     }
   }, [tasks]);
 
-  const addTask = useCallback((text: string) => {
+  const addTask = useCallback((text: string, isDaily: boolean) => {
     if (text.trim() === '') return;
-    const newTask: Task = { id: nanoid(), text, completed: false };
+    const newTask: Task = { id: nanoid(), text, completed: false, isDaily };
     setTasks((prevTasks) => [newTask, ...prevTasks]);
   }, []);
 
@@ -70,9 +83,17 @@ export function useTasks() {
 
   const toggleTask = useCallback((id: string) => {
     setTasks((prevTasks) =>
-      prevTasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
+      prevTasks.map((task) => {
+        if (task.id === id) {
+          const newCompleted = !task.completed;
+          return { 
+            ...task, 
+            completed: newCompleted,
+            completedOn: newCompleted && task.isDaily ? new Date().toISOString() : task.completedOn
+          };
+        }
+        return task;
+      })
     );
   }, []);
 
